@@ -1,7 +1,37 @@
-While working with the Verilog code, I explored different ways to implement basic logic gates and adders, and noticed some interesting differences depending on the coding style. For example, I saw that when I used an assign statement to directly connect inputs and outputs, it mapped cleanly to a simple logic gate—no extra hardware or storage was inferred. But when I used an always block, I had to declare the output as reg, even though no actual flip-flop or memory element was being created. This is because in Verilog, any variable assigned inside an always block needs to be a reg, purely for syntax reasons, not necessarily hardware.
+Observations
 
-I also realized that the way I wrote conditional statements could affect what kind of hardware gets synthesized. Writing multiple independent if statements (without else) caused latches to be inferred, since the synthesis tool had to store values when no conditions were true. On the other hand, using if-else if-else chains avoided latches because every possible input case was accounted for, making sure the output was always explicitly assigned. This coding style led to simpler, cleaner hardware. It was a useful reminder that incomplete assignments or missing else branches can unintentionally create storage elements in combinational circuits.
+While working with the Verilog code, I explored different ways to implement
+basic logic gates and adders, and noticed some interesting differences depending
+on the coding style. For example, I saw that when I used an assign statement
+to directly connect inputs and outputs, it mapped cleanly to a simple logic gate
+— no extra hardware or storage was inferred. But when I used an always block,
+I had to declare the output as reg, even though no actual flip-flop or memory
+element was being created. This is because in Verilog, any variable assigned
+inside an always block needs to be a reg, purely for syntax reasons,
+not necessarily hardware.
 
-When building the adder modules, I saw how important it was to group multiple statements inside begin-end blocks, especially after an else. Without that, the code could misinterpret which statements belonged together. I also noticed that creating a ripple-carry adder using individual 1-bit adder modules (connected in sequence) worked well, but writing a parameterized version with a generate block made the design more scalable and elegant. Using a carry array to manage intermediate carries helped keep the connections clear, and assigning the final cout from the last carry bit completed the design neatly.
+I also realized that the way I wrote conditional statements could affect what
+kind of hardware gets synthesized. Writing multiple independent if statements
+(without else) caused latches to be inferred, since the synthesis tool had to
+store values when no conditions were true. On the other hand, using if-else if-else
+chains avoided latches because every possible input case was accounted for,
+making sure the output was always explicitly assigned. This coding style led
+to simpler, cleaner hardware. It was a useful reminder that incomplete
+assignments or missing else branches can unintentionally create storage elements
+in combinational circuits.
 
-Overall, this exercise highlighted how coding style in Verilog doesn’t just affect readability—it directly impacts the hardware that gets synthesized. Small choices like adding an else, or deciding between assign and always, can determine whether latches, multiplexers, or pure logic gates are created. This deeper understanding will definitely help me write more efficient and predictable Verilog code in the future.
+When building the adder modules, I saw how important it was to group multiple
+statements inside begin-end blocks, especially after an else. Without that,
+the code could misinterpret which statements belonged together. I also noticed
+that creating a ripple-carry adder using individual 1-bit adder modules
+(connected in sequence) worked well, but writing a parameterized version
+with a generate block made the design more scalable and elegant. Using a carry
+array to manage intermediate carries helped keep the connections clear,
+and assigning the final cout from the last carry bit completed the design neatly.
+
+Overall, this exercise highlighted how coding style in Verilog doesn’t just
+affect readability — it directly impacts the hardware that gets synthesized.
+Small choices like adding an else, or deciding between assign and always,
+can determine whether latches, multiplexers, or pure logic gates are created.
+This deeper understanding will definitely help me write more efficient
+and predictable Verilog code in the future.
