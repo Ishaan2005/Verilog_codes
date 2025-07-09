@@ -36,8 +36,3 @@ The repository is organized into the following categories:
 - and much more.......
 ---
 
-## 📝 How to Use
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/verilog-code-repo.git
