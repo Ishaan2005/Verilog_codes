@@ -1,6 +1,6 @@
 # Verilog HDL Code Repository
 
-This repository contains Verilog HDL codes covering a wide range of digital design topics, from basic combinational logic to finite state machines (FSMs) and testbenches. It is designed as a resource for students, hobbyists, and engineers learning or practicing Verilog. i am editing
+This repository contains Verilog HDL codes covering a wide range of digital design topics, from basic combinational logic to finite state machines (FSMs) and testbenches. It is designed as a resource for students, hobbyists, and engineers learning or practicing Verilog.
 
 ## 📚 Contents
 
