@@ -2,11 +2,11 @@
 
 This repository contains Verilog HDL codes covering a wide range of digital design topics, from basic combinational logic to finite state machines (FSMs) and testbenches. It is designed as a resource for students, hobbyists, and engineers learning or practicing Verilog.
 
-## 📚 Contents
+## Contents
 
 The repository is organized into the following categories:
 
-### ✅ Combinational Logic
+### Combinational Logic
 - Logic gates (AND, OR, NOT)
 - Multiplexers
 - Decoders
@@ -15,7 +15,7 @@ The repository is organized into the following categories:
 - Comparators
 - Encoders
 
-### 🔁 Sequential Logic
+### Sequential Logic
 - Latches
 - Flip-flops (SR, D, JK, T)
 - Registers
@@ -23,14 +23,14 @@ The repository is organized into the following categories:
 - Shift registers
 - Sequence detectors
 
-### 🚦 Finite State Machines (FSMs)
+### Finite State Machines (FSMs)
 - Moore FSMs
 - Mealy FSMs
 - Traffic light controllers
 - Elevator controllers
 - Pattern detectors
 
-### 🧪 Testbenches
+### Testbenches
 - Testbenches for all modules with sample stimulus
 - Includes waveform simulation-ready testbenches
 - and much more.......
