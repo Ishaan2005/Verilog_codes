@@ -14,3 +14,4 @@ initial begin
     #5 a = 4'b0110; b = 4'b0001;
   end
 endmodule
+
