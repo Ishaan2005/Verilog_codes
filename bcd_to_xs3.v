@@ -13,3 +13,27 @@ repeat(20)begin
 end
 end
 endmodule
+
+module lpw(input a,b,c,d,output w,x,y,z,output[3:0]p,output[3:0]q);
+assign w = a|b&(c|d);
+assign x =(~b&(c|d)) | (b&(~c&~d));
+assign y = ~(c ^ d);
+assign z = ~d;
+assign p = {a,b,c,d};
+assign q = {w,x,y,z};
+endmodule
+//generated using basic gates and a multiplier
+
+
+module DUT();
+reg a,b,c,d;
+wire w,x,y,z;
+wire[3:0]p;
+wire[3:0]q;
+lpw xyz(a,b,c,d,w,x,y,z,p,q);
+initial begin 
+repeat(20)begin
+#5 {a,b,c,d} = $random % 10;
+end
+end
+endmodule
