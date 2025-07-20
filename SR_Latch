@@ -3,6 +3,15 @@ assign Qbar = ~(S|Q);
 assign Q = ~(R|Qbar);
 endmodule
 
+
+
+module lpw(input S,R,output Q,Qbar);
+assign Q = ~(S & Qbar);
+assign Qbar = ~(R & Q);
+endmodule
+
+
+
 module DUT();
 reg S,R;
 wire Q,Qbar;
