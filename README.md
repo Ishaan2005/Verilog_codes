@@ -7,6 +7,7 @@ This repository contains Verilog HDL codes covering a wide range of digital desi
 The repository is organized into the following categories:
 
 ### Combinational Logic
+
 - Logic gates (AND, OR, NOT)
 - Multiplexers
 - Decoders
@@ -16,6 +17,7 @@ The repository is organized into the following categories:
 - Encoders
 
 ### Sequential Logic
+
 - Latches
 - Flip-flops (SR, D, JK, T)
 - Registers
@@ -24,6 +26,7 @@ The repository is organized into the following categories:
 - Sequence detectors
 
 ### Finite State Machines (FSMs)
+
 - Moore FSMs
 - Mealy FSMs
 - Traffic light controllers
@@ -31,8 +34,19 @@ The repository is organized into the following categories:
 - Pattern detectors
 
 ### Testbenches
+
 - Testbenches for all modules with sample stimulus
 - Includes waveform simulation-ready testbenches
 - and much more.......
+
 ---
 
+### To run the codes
+
+```bash
+
+docker build -t verilog-env .
+
+docker run -it verilog-env
+
+```
