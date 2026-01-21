@@ -45,6 +45,8 @@ The repository is organized into the following categories:
 
 ```bash
 
+git clone https://github.com/Ishaan2005/Verilog_codes.git
+
 docker build -t verilog-env .
 
 docker run -it verilog-env
