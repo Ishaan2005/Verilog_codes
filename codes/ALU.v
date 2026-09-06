@@ -1,4 +1,4 @@
-module lpw(input[2:0]in,input[3:0]a,input[3:0]b,output reg[4:0]out);
+module lpw(input[2:0]in,input a, b,output reg[1:0]out);
 always@(*)begin
 case(in)
 3'b000: out = a&b;
@@ -9,7 +9,7 @@ case(in)
 3'b101: out = a << 1;
 3'b110: out = a >> 1;
 3'b111: out = ~b;
-default: out = 5'b0;
+default: out = 2'b0;
 endcase
 end
 endmodule
