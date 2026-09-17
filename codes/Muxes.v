@@ -34,7 +34,16 @@ always@(*)begin
 end
 endmodule
 
+//in[sel] means:
+//Select exactly one bit from the 16-bit in bus, where sel tells you which bit.
+module vlsi(input[15:0]in,output out,input[3:0]sel);
+assign out = in[sel];
+endmodule
 
+// parameterized mux
+module vlsi #(parameter k = 4)(input[2**k-1:0]in,output out,input[k-1:0]sel);
+assign out = in[sel];
+endmodule
 
 
 
