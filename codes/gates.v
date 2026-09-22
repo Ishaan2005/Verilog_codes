@@ -1,5 +1,6 @@
-//gates
 
+//gates
+/*
 //and gate
 module vlsi(input a,b,output out);
 assign out = a ? b:1'b0;
@@ -112,7 +113,7 @@ endmodule
 //assign out = a | b;
 //endmodule
 
-/*
+
 module vlsi(input a,b, output reg out);
 always@(*)begin
 out = 0;
@@ -124,9 +125,9 @@ out = 1;
 end
 end
 endmodule 
-*/
 
-/*
+
+
 module vlsi(input a,b,output reg out);
 always@(*)begin
 if(a == 0 && b == 0)begin
@@ -143,9 +144,9 @@ out = 1;
 end
 end
 endmodule
-*/
 
-/*
+
+
 module vlsi(input a,b,output reg out);
 always@(*)begin
 out = 0;
@@ -163,10 +164,10 @@ out = 1;
 end
 end
 endmodule
-*/
 
 
-/*
+
+
 module vlsi(input a,b, output reg out);
 always@(*)begin 
 if(a == 0 && b == 0)begin
@@ -183,10 +184,10 @@ out = 1;
 end
 end
 endmodule 
-*/
 
 
-/*
+
+
 module vlsi(input a,b,output reg out);
 always@(*)begin
 if(a == 0 && b == 0)begin
@@ -203,14 +204,14 @@ out = 1;
 end
 end
 endmodule 
-*/
+
 
 // ======================================== XOR Gate ==================================================================
 //module vlsi(input a,b, output out);
 //assign out = a^b;
 //endmodule
 
-/*
+
 module vlsi(input a,b, output reg out);
 always@(*)begin
 if(a == 0 && b == 0)begin
@@ -227,9 +228,9 @@ out = 0;
 end
 end
 endmodule 
-*/
 
-/*
+
+
 module vlsi(input a,b, output reg out);
 always@(*)begin
 if(a == 0 && b == 0)begin
@@ -246,9 +247,9 @@ out = 0;
 end
 end
 endmodule 
-*/
 
-/*
+
+
 module vlsi(input a,b, output reg out);
 always@(*)begin
 if(a == 0 && b == 0)begin
@@ -265,7 +266,7 @@ out = 0;
 end
 end
 endmodule
-*/
+
 
 //============================================== NAND Gate =================================================================
 
@@ -274,7 +275,7 @@ endmodule
 //endmodule
 
 
-/*
+
 module vlsi(input a,b,output reg out);
 always@(*)begin
 if(a == 0 && b == 0)begin
@@ -293,7 +294,7 @@ end
 endmodule
 */
 
-/*
+
 module vlsi(input a,b,output reg out);
 always@(*)begin
 if(a == 0 && b == 0)begin
@@ -310,4 +311,4 @@ out = 0;
 end 
 end
 endmodule 
-*/
+
