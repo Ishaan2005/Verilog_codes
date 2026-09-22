@@ -1,3 +1,4 @@
+/*
 module vlsi(input i0,i1,i2,i3,output out,input s0,s1);
 assign out = (~s0&~s1&i0) |(~s0&s1&i1)|(s0&~s1&i2)|(s0&s1&i3); 
 endmodule 
@@ -41,11 +42,13 @@ assign out = in[sel];
 endmodule
 
 // parameterized mux
+*/ 
 
-module vlsi #(parameter k = 4)(input[2**k-1:0]in,output out,input[k-1:0]sel);
+module muxes #(parameter k = 4)(input[2**k-1:0]in,output out,input[k-1:0]sel);
 assign out = in[sel];
 endmodule
 
+/*
 module Testbench;
 reg[15:0]in;
 reg[3:0]sel;
@@ -63,4 +66,4 @@ $monitor($time,"in = %b,sel = %b,out = %b",in,sel,out);
 #5 $finish
 end
 endmodule 
-
+*/
